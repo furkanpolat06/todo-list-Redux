@@ -9,8 +9,8 @@ export const addTodo = (payload) => ({type: ADD_TODO, payload})
 
 const initialState = {
     todoList : [
-        {id:new Date().getTime(), text:"work redux", complated:false},
-        {}
+        {id:new Date().getTime(), text:"work redux", completed:true},
+        
 ],
 }
 

@@ -9,7 +9,7 @@ const TodoItem = ({ completed, text, id }) => {
 
   const styled = {
     textDecoration: completed ? "line-through" : "none",
-    backgroundColor: completed ? "#A9A9A9" : "orange",
+    backgroundColor: completed ? "#A9A9A9" : "lightgreen",
     borderRadius: "5px",
   }
 
