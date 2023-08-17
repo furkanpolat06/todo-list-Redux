@@ -10,6 +10,7 @@ export const addTodo = (payload) => ({type: ADD_TODO, payload})
 const initialState = {
     todoList : [
         {id:new Date().getTime(), text:"work redux", complated:false},
+        {}
 ],
 }
 
@@ -18,7 +19,7 @@ export const todoReducer= (state = initialState, { type, payload }) => {
 
   case ADD_TODO:
     return {
-        todoList:[...todoList, {id: new Date().getTime(), text:payload, complated:false},
+        todoList:[...state.todoList, {id: new Date().getTime(), text:payload, complated:false},
         ],
      }
 
