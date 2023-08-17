@@ -5,7 +5,7 @@ import TodoList from "./TodoList"
 const Todo = () => {
   return (
     <div className="app">
-      <h2>Todo With Redux</h2>
+      <h2 className="header">Todo-List with Redux</h2>
       <TodoInput />
       <TodoList />
     </div>

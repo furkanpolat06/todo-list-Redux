@@ -1,6 +1,10 @@
+.header{
+  font-size: 2rem
+}
 .todo-input {
   padding: 10px;
   font-size: 1rem;
+  margin: 1rem;
   
 }
 
