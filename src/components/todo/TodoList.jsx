@@ -1,8 +1,10 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import TodoItem from "./TodoItem"
+import { clearTodo } from "../../store/todoReducer"
 
 const TodoList = () => {
   const todoList=useSelector((state)=>state.todoList)
+  const dispatch=useDispatch()
 
 
 
