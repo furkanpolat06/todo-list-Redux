@@ -22,7 +22,7 @@ const TodoItem = ({ completed, text, id }) => {
   const styled = {
     textDecoration: completed ? "line-through" : "none",
     backgroundColor: completed ? "#bebe" : "lightgreen",
-    fontSize: completed ? ".8rem" : "1rem",
+   
     borderRadius: "5px",
   }
 

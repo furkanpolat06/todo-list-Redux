@@ -12,7 +12,7 @@ export const deleteTodo = (id) => ({ type: DELETE_TODO, payload: id });
 
 const initialState = {
     todoList : [
-        {id:new Date().getTime(), text:"work redux", completed:true},
+        
         
 ],
 }

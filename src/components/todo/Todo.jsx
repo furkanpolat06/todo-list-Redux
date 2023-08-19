@@ -5,7 +5,7 @@ import TodoList from "./TodoList"
 const Todo = () => {
   return (
     <div className="app">
-      <h1 className="header">Todo-List</h1>
+      <h1 className="header">Todo - List</h1>
       <TodoInput />
       <TodoList />
     </div>

@@ -1,23 +1,25 @@
 .header{
-  font-size: 2rem
+  font-size: 2.5rem
 }
 h1{
   font-family: 'Monoton', cursive;
-
+  
 }
 .todo-input {
   padding: 10px;
   font-size: 1rem;
-  margin: 1rem;
+  margin-bottom: 1rem;
   
 }
 
 .add-button {
   padding: 12px;
+  border-radius: 5px;
   font-size: 1rem;
   background-color: green;
   color: white;
   border: none;
+  margin: 1rem
 }
 .add-button:hover{
   cursor: pointer;
@@ -40,11 +42,11 @@ h1{
 }
 
 .todo-list {
-  min-width: 400px;
+  min-width: 320px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 8px;
 }
 
 .clear-wrapper{
@@ -60,6 +62,7 @@ h1{
   color: white;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 
 .delete-logo {
@@ -67,3 +70,4 @@ h1{
   margin: 10px;
   cursor: pointer;
 }
+
