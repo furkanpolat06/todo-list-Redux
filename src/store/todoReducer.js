@@ -7,6 +7,7 @@ export const CLEAR_TODO = 'CLEAR_TODO'
 export const addTodo = (payload) => ({type: ADD_TODO, payload})
 export const clearTodo=()=>({type:CLEAR_TODO})
 export const toggleTodo = (id) => ({ type: TOGGLE_TODO, payload: id });
+export const deleteTodo = (id) => ({ type: DELETE_TODO, payload: id });
 
 
 const initialState = {
@@ -29,7 +30,10 @@ export const todoReducer= (state = initialState, { type, payload }) => {
       return initialState
 
      case DELETE_TODO:
-      return initialState
+      return {
+        ...state,
+        todoList: state.todoList.filter(todo => todo.id !== payload),
+      };
 
       case TOGGLE_TODO:
       return {

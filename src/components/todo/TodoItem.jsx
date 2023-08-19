@@ -2,7 +2,7 @@ import React from "react"
 import okLogo from "../../assets/ok.png"
 import deleteLogo from "../../assets/delete.png"
 import { useDispatch } from 'react-redux';
-import { toggleTodo } from '../../store/todoReducer';
+import { toggleTodo, deleteTodo } from '../../store/todoReducer';
 
 const TodoItem = ({ completed, text, id }) => {
   const dispatch = useDispatch();
@@ -11,11 +11,17 @@ const TodoItem = ({ completed, text, id }) => {
     dispatch(toggleTodo(id));
   };
 
-  const handleDelete = () => {}
+  const handleDelete = () => {
+    const shouldDelete = window.confirm("Bu öğeyi silmek istediğinizden emin misiniz?");
+    if (shouldDelete) {
+      dispatch(deleteTodo(id));
+    }
+  };
 
   const styled = {
     textDecoration: completed ? "line-through" : "none",
-    backgroundColor: completed ? "#A9A9A9" : "lightgreen",
+    backgroundColor: completed ? "#bebe" : "lightgreen",
+    fontSize: completed ? ".8rem" : "1rem",
     borderRadius: "5px",
   }
 
