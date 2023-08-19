@@ -6,6 +6,8 @@ export const CLEAR_TODO = 'CLEAR_TODO'
 // ? Payload bizim reducer veri göndereceğimiz zaman lazım olur
 export const addTodo = (payload) => ({type: ADD_TODO, payload})
 export const clearTodo=()=>({type:CLEAR_TODO})
+export const toggleTodo = (id) => ({ type: TOGGLE_TODO, payload: id });
+
 
 const initialState = {
     todoList : [
@@ -29,8 +31,16 @@ export const todoReducer= (state = initialState, { type, payload }) => {
      case DELETE_TODO:
       return initialState
 
-     case TOGGLE_TODO:
-      return initialState
+      case TOGGLE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.map(todo => {
+          if (todo.id === payload) {
+            return { ...todo, completed: !todo.completed };
+          }
+          return todo;
+        }),
+      };
       
   default:
     return state
