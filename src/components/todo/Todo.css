@@ -1,6 +1,10 @@
 .header{
   font-size: 2rem
 }
+h1{
+  font-family: 'Monoton', cursive;
+
+}
 .todo-input {
   padding: 10px;
   font-size: 1rem;

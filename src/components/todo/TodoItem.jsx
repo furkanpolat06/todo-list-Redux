@@ -1,6 +1,7 @@
 import React from "react"
 import okLogo from "../../assets/ok.png"
 import deleteLogo from "../../assets/delete.png"
+import returnLogo from "../../assets/return.png"
 import { useDispatch } from 'react-redux';
 import { toggleTodo, deleteTodo } from '../../store/todoReducer';
 
@@ -31,8 +32,8 @@ const TodoItem = ({ completed, text, id }) => {
       <div>
         <span>
           <img
-            src={okLogo}
-            className="ok-logo"
+              src={completed ? returnLogo : okLogo}            
+              className="ok-logo"
             alt="ok logo"
             onClick={handleToggle}
           />
