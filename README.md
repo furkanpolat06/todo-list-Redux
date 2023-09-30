@@ -2,7 +2,7 @@
 https://todolistt-redux.netlify.app/
 
 
-# React + Vite + Redux
+## React + Vite + Redux
 
 This is a simple TODO (To-Do List) application built with React and Redux.
 
